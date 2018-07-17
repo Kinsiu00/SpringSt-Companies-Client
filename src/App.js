@@ -25,7 +25,6 @@ class App extends Component {
     let companyList = this.state.companyList
     return (
       <div>
-        <button handleMe={this.checkState}>check me</button>
         <WebcamCapture setCurrentCompany={this.setCurrentCompany}/>
         {
           this.state.apiResult &&
