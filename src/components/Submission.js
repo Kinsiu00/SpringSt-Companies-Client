@@ -9,7 +9,7 @@ class Submission extends Component {
             const image = this.props.imagine
             axios.post('/vision', {image}).then(
                 (result) => {
-                    this.props.setCurrentCompany(result.data)
+                    this.props.setCurrentCompany(result.data[0])
                 })
     }
 

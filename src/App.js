@@ -16,7 +16,7 @@ class App extends Component {
   }
 
   setCurrentCompany = (apiRes) => {
-    this.setState({apiResult:apiRes})    
+    this.setState({apiResult: apiRes})    
   }
   checkState = () => {
     console.log(this.state)
@@ -28,13 +28,14 @@ class App extends Component {
         <WebcamCapture setCurrentCompany={this.setCurrentCompany}/>
         {
           this.state.apiResult &&
-          <h2>{this.state.apiResult}</h2>
+          <h2>{this.state.apiResult.name}</h2>
         }
-        {
+        {/* {
           companyList.map(company => {
             return <Company key={company.id}cCompany={company}/>
           })
-        }
+        } */}
+        <button buttonResponse={this.checkState()}>click</button>
       </div>
     );
   }
